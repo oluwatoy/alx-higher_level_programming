@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-print("My first code on python")
+python3 $PYCODE
