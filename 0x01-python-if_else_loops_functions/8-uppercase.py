@@ -7,6 +7,3 @@ def uppercase(str):
         else:
             print(str[i], end='')
     i += 1
-uppercase("best")
-print()
-uppercase("Best School 98 Battery street")
