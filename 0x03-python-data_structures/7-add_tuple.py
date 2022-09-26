@@ -1,19 +1,14 @@
 #!/usr/bin/python3
-
 def add_tuple(tuple_a=(), tuple_b=()):
-    lenA = len(tuple_a)
-    lenB = len(tuple_b)
-# check for tuple_a
-    if lenA < 1:
-        tuple_a = (0, 0)
-    elif lenA < 2:
-        tuple_a = (tuple_a[0], 0)
 
-# check for tuple_b
-    if lenB < 1:
-        tuple_b = (0, 0)
-    elif lenB < 2:
-        tuple_b = (tuple_b[0], 0)
+    a = len(tuple_a)
+    b = len(tuple_b)
 
-    res = (tuple_a[0] + tuple_b[0], tuple_a[1] + tuple_b[1])
-    return 
+    sums = ((tuple_a[0] if a > 0 else 0) + (tuple_b[0] if b > 0 else 0),
+            (tuple_a[1] if a > 1 else 0) + (tuple_b[1] if b > 1 else 0))
+
+    return sums
+
+# tuple_a += (0, 0)
+# tuple_b += (0, 0)
+# return (tuple_a[0] + tuple_b[0], tuple_a[1] + tuple_b[1])
