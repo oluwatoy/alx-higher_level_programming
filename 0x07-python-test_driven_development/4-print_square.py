@@ -1,5 +1,3 @@
-table File  20 lines (17 sloc)  537 Bytes
-
 #!/usr/bin/python3
 """Defines a square-printing function."""
 
