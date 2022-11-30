@@ -1,9 +1,7 @@
--- genre id by show
-SELECT tgs.name AS genre, COUNT(tg.genre_id) AS number_shows
-FROM tv_shows AS ts
-LEFT JOIN tv_show_genres AS tg
-ON ts.id = tg.show_id
-LEFT JOIN tv_genres AS tgs
-ON tg.genre_id = tgs.id
-WHERE tg.genre_id IS NOT NULL
-GROUP BY tgs.name ORDER BY number_shows DESC;
+-- Prints and joins records from two tables with a matching field
+SELECT tv_genres.name AS genre, COUNT(tv_show_genres.genre_id) AS number_of_shows
+    FROM tv_genres
+    RIGHT JOIN tv_show_genres
+        ON tv_genres.id = tv_show_genres.genre_id
+    GROUP BY tv_genres.name
+    ORDER BY number_of_shows DESC;
